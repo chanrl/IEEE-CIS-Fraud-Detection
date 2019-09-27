@@ -31,5 +31,6 @@ precision: 0.8978102189781022
 
 recall: 0.38886186770428016
 
+The most important stat here would be recall, as this is indicating there's a lot of false negatives. It seems like the model is pretty accurate and has decent precision, but for fraud detection the recall is horrible. It is classifying too many fraudulent transactions as a false negative, and the model needs to pick up on as many possible fraudulent transactions as possible even if it lowers the precision.
 
 Training score is at .99 and Validation score is at .97, so it seems as the model is currently overfitting.
