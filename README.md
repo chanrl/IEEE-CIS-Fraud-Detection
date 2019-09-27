@@ -1,7 +1,7 @@
 ## IEEE-CIS-Fraud-Detection
 
 # Background
-Exploring a financial dataset from Vesta Corporation. This (Kaggle competition)[kaggle.com/c/ieee-fraud-detection/overview] is seeking the best solutions for fraud prevention.
+Exploring a financial dataset from Vesta Corporation. This [Kaggle competition](kaggle.com/c/ieee-fraud-detection/overview) is seeking the best solutions for fraud prevention.
 
 # Objectives
 - Clean e-commerce transactions dataset provided by Vesta
@@ -33,4 +33,4 @@ recall: 0.38886186770428016
 
 The most important stat here would be recall, as this is indicating there's a lot of false negatives. It seems like the model is pretty accurate and has decent precision, but for fraud detection the recall is horrible. It is classifying too many fraudulent transactions as a false negative, and the model needs to pick up on as many possible fraudulent transactions as possible even if it lowers the precision.
 
-Training score is at .99 and Validation score is at .97, so it seems as the model is currently overfitting.
+Training score is at .99 and Validation score is at .97, and that probably just reflects the model mostly classifying all the transactions as not fraud.
