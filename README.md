@@ -1,7 +1,7 @@
 ## IEEE-CIS-Fraud-Detection
 
 # Background
-Exploring a financial dataset from Vesta Corporation. This [Kaggle competition](kaggle.com/c/ieee-fraud-detection/overview) is seeking the best solutions for fraud prevention.
+Exploring a financial dataset from Vesta Corporation. This [Kaggle competition](https://kaggle.com/c/ieee-fraud-detection/overview) is seeking the best solutions for fraud prevention.
 
 # Objectives
 - Clean e-commerce transactions dataset provided by Vesta
