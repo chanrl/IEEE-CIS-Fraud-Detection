@@ -23,7 +23,7 @@ When I have more time, I will look into revisiting the Vespa ID columns, as ther
 Last set of information I would need would be cost benefit values for false positives and false negatives and true positives. That way I would be able to figure out what threshold I should set for the model when flagging a transaction as fraud or not. 
 
 # Results
-My current best performing model (random forest) including all features:
+My current best performing model (random forest) including all features at 0.5 threshold:
 
 accuracy: 0.9771819013106648
 
@@ -31,6 +31,12 @@ precision: 0.8978102189781022
 
 recall: 0.38886186770428016
 
-The most important stat here would be recall, as this is indicating there's a lot of false negatives. It seems like the model is pretty accurate and has decent precision, but for fraud detection the recall is horrible. It is classifying too many fraudulent transactions as a false negative, and the model needs to pick up on as many possible fraudulent transactions as possible even if it lowers the precision.
+The most important stat here would be recall, as this is indicating there's a lot of false negatives. For fraud detection the recall is horrible. It is classifying too many fraudulent transactions as a false negative, and the model needs to pick up on as many possible fraudulent transactions as possible even if it lowers the precision.
 
-Training score is at .99 and Validation score is at .97, and that probably just reflects the model mostly classifying all the transactions as not fraud.
+If I set the threshold to 0.10, the results are as follows:
+
+precision: 0.31622874806800616
+
+recall: 0.7617274758004468
+
+Recall is better, but still not able to grab an important chunk of false negatives. Precision is poor, and the amount of false positives might be too high.
