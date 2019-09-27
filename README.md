@@ -9,7 +9,7 @@ Exploring a financial dataset from Vesta Corporation. This (Kaggle competition)[
 - Benchmark machine learning models on the Vesta e-commerce transactions dataset
 
 # Thoughts
-I was able to feature engineer most of the data columns. I did not use time as a feature, although I do understand that might have predictive value. I have not experienced converting time deltas to date time, or simply converting it to a different value that could have some relationship to fraudulent transactions or not.
+I was able to feature engineer most of the data columns. I did not use time as a feature, although I do understand that might have predictive value. I have not experienced converting time deltas to date time, or simply converting it to a different value that could have some relationship to fraudulent transactions or not. If it was in a date time format, I would have been able to split it into month, day, and hours of the day, and maybe find a relationship between certain months and hours where fraud occurs.
 
 For a lot of the numerical features, such as distance and days between transactions, I filled the nan (missing) values with the median value, and then created a different column to indicate whether or not the row was originally nan and replaced with a median value.
 
@@ -20,5 +20,12 @@ Another aspect I was not too sure about was the meaning of 'credit or debit' as 
 
 When I have more time, I will look into revisiting the Vespa ID columns, as there's about 30 columns with strings, so I would need to use some clever regex to extract the proper values. There's one column with the browser used, and it would have versions along with the browser used. It might be predictive if for example, fraudulent transactions occur under older versions of internet explorer or AOL browser.
 
+Last set of information I would need would be cost benefit values for false positives and false negatives and true positives. That way I would be able to figure out what threshold I should set for the model when flagging a transaction as fraud or not. 
 
+# Results
+My current best performing model (random forest) including all features:
+accuracy: 0.9771819013106648
+precision: 0.8978102189781022
+recall: 0.38886186770428016
 
+Training score is at .99 and Validation score is at .97, so it seems as the model is currently overfitting.
