@@ -24,8 +24,12 @@ Last set of information I would need would be cost benefit values for false posi
 
 # Results
 My current best performing model (random forest) including all features:
+
 accuracy: 0.9771819013106648
+
 precision: 0.8978102189781022
+
 recall: 0.38886186770428016
+
 
 Training score is at .99 and Validation score is at .97, so it seems as the model is currently overfitting.
